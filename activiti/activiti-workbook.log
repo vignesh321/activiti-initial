@@ -1,0 +1,69 @@
+users : 
+kermit:kermit
+vig:vig
+admin:admin
+root:root
+
+
+
+groups:
+developers
+managers 
+
+
+
+how to solve it ?
+Also the user needs to provide the process Instance Id which can be then used for closing 
+1 make a rest service awaiting for input 
+if the approver chooses submit, then trigger the service through post method and then pull out the choice of the approver 
+and process it 
+
+2 Else also try to close/complete it via variables and see ...
+
+
+3. Also look for disabling the security validator.
+
+
+
+List of services URI's running :
+
+GET and POST as well : localhost:8080/identity/users
+-- sample POST response 
+{
+            "id": "root",
+            "firstName": "root",
+            "lastName": null,
+            "url": "http://localhost:8080/identity/users/admin",
+            "email": "admin.activiti@abc.com",
+            "pictureUrl": null,
+            "password" : "root"
+}
+
+
+
+
+-- 
+check for the variable name and senf the response from the form
+
+/runtime/executions/{executionId}/variables/{variableName}
+
+
+--
+
+creating variables before hand and then populating them on time will help
+
+like if status variable is present before hand and while completing the User Task, the status variable can be initiated.
+
+
+
+
+--- 
+Start Process 1 and 2 buttons 
+
+
+
+
+
+
+
+
